@@ -5,8 +5,6 @@ export * from "./IconHTML";
 export * from "./IconReact";
 export * from "./code";
 export * from "./IconSvelte";
-export * from "./IconRadix";
-export * from "./IconRadixVue";
 export * from "./IconAlpinejs";
 export * from "./IconLoading";
 export * from "./search";

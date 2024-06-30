@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation"
 import Image from "next/image";
 import { SiGithub } from "react-icons/si";
 import { HoverBorderGradient } from "./hover-border";
@@ -24,6 +25,7 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
+  const router = useRouter();
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
@@ -39,6 +41,7 @@ export const FloatingNav = ({
   }, []);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
+
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
 
@@ -89,7 +92,7 @@ export const FloatingNav = ({
             height={isMobile ? "100" : "110"}
             width={isMobile ? "110" : "130"}
             className="cursor-pointer mr-24"
-            onClick={() => window.open("/")}
+            onClick={() => router.push("#")}
             alt="logo"
           />
         </div>
@@ -103,9 +106,9 @@ export const FloatingNav = ({
         ) : (
           <>
             <div className="flex flex-row gap-8 px-24">
-              {navItems.map((navItem: any, idx: number) => (
+              {navItems.map((navItem: any) => (
                 <Link
-                  key={`link=${idx}`}
+                  key={navItem.link} // Use a unique identifier
                   href={navItem.link}
                   className={cn(
                     "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
@@ -140,14 +143,15 @@ export const FloatingNav = ({
             &times;
           </button>
           <div className="flex flex-col space-y-4">
-            {navItems.map((navItem: any, idx: number) => (
+            {navItems.map((navItem: any) => (
               <Link
-                key={`mobile-link=${idx}`}
+                key={navItem.link} // Use a unique identifier
                 href={navItem.link}
-                className="text-white hover:text-gray-300 mr-24"
-                onClick={toggleMenu}
+                className={cn(
+                  "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                )}
               >
-                {navItem.name}
+                <span className="text-sm !cursor-pointer">{navItem.name}</span>
               </Link>
             ))}
             <HoverBorderGradient

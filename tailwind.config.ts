@@ -26,6 +26,9 @@ const config = {
       },
     },
     extend: {
+      backdropBlur: {
+        xl: '24px',
+      },
       colors: {
         black: {
           DEFAULT: "#000",
@@ -82,9 +85,18 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
+        },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          }
         },
         shine: {
           '0%': { transform: 'translateY(-100%)' },
@@ -119,6 +131,14 @@ const config = {
             transform: "translateX(-50%) translateY(-10%)",
           },
         },
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
         moveInCircle: {
           "0%": {
             transform: "rotate(0deg)",
@@ -146,9 +166,11 @@ const config = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
+        "meteor-effect": "meteor 5s linear infinite",
         "accordion-up": "accordion-up 0.2s ease-out",
         'shine-vertical': 'shineVertical 10s linear infinite',
         spotlight: "spotlight 2s ease .75s 1 forwards",
@@ -158,8 +180,8 @@ const config = {
         third: "moveInCircle 40s linear infinite",
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
-        scroll:
-          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+
       },
     },
   },

@@ -120,6 +120,10 @@ body::-webkit-scrollbar {
 
 
 
+
+
+
+
 .outer {
   width: 100%;
   height: 100%;
@@ -257,10 +261,105 @@ body::-webkit-scrollbar {
   animation-play-state: var(--animation-play-state, running);
 }
 
-button {
-  transition: background-color 0.3s ease;
+
+
+
+
+.card {
+  width: auto;
+  height: auto;
+  padding: 2rem;
+  background: rgb(16, 16, 23, 0.5);
+  font-family: inherit;
+  position: relative;
+  border-radius: 8px;
 }
 
-button:hover {
-  background-color: #0056b3;
+.quote {
+  color: rgb(25, 84, 123, 0.8);
+  margin-top: -1rem;
+  margin-left: -4rem;
+  position: relative;
+}
+
+.body-text {
+  font-size: 15px;
+  font-weight: 800;
+  padding: 24px 10px 4px;
+  color: rgba(153, 196, 209, 0.507);
+  position: absolute;
+  top: 25px;
+  left: 1px;
+  line-height: 23px;
+}
+
+.author {
+  margin-top: 6.8rem;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card:hover .author {
+  opacity: 1;
+}
+
+.pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.author-container {
+  position: absolute;
+}
+
+.author {
+  font-weight: 700;
+  color: rgb(25, 84, 123);
+  padding-left: 10px;
+  text-align: left;
+}
+
+.card .author svg {
+  display: inline;
+  font-size: 12px;
+}
+
+
+
+
+.clientCarousel {
+  height: 400px;
+  /* Adjust as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollingWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: scrollVertical 20s linear infinite;
+  /* Adjust duration as needed */
+}
+
+.clientLogo {
+  margin-bottom: 20px;
+  /* Adjust spacing between logos */
+}
+
+@keyframes scrollVertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.scrollingWrapper:hover {
+  animation-play-state: paused;
 }

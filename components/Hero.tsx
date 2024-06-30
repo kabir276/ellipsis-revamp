@@ -49,12 +49,6 @@ const Hero = () => {
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             TRUSTED BY 8,100+ GITHUB USERS
           </p>
-
-          {/**
-           *  Link: https://ui.aceternity.com/components/text-generate-effect
-           *
-           *  change md:text-6xl, add more responsive code
-           */}
           <FloatingCard />
           <TextGenerateEffect
             words="AI Code Reviews & Bug Fixes"
@@ -65,18 +59,17 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-xl">
             Ellipsis is an AI developer tool that automatically reviews code and fixes bugs on pull requests.
           </p>
-          <div className="flex flex-row gap-1">
-            <button className="button1" id="">
-              <div className="flex flex-row gap-2 text-sm sm:text-base cursor-pointer">
-                <span>Get started for free</span>
-                <span className="text-[24px] justify-center"><IconButton /></span>
-              </div>
+          <div className="flex flex-row gap-2 cursor-pointer">
+            <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#cbcbcb] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 cursor-pointer text-xs md:text-base">Get started for free &nbsp; <IconButton />
             </button>
-            <a id="" className="button1">
+            <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#cbcbcb] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 cursor-pointer text-xs md:text-base">
               Schedule a demo
-            </a>
+            </button>
+            {/* <a id="" className="button1">
+             
+            </a> */}
           </div>
-          <span className="">7 Days free trial - No credit card required</span>
+          <span className="mt-1">7 Days free trial - No credit card required</span>
           <span className="text-lg text-[#acacac] flex flex-row gap-2 mt-8">Backed By-  <span className="text-orange-500 flex mt-1 flex-row gap-1 text-xl">
             <SiYcombinator /> <span className="-mt-[4px]">Combinator</span><span><Image
               src="/asicp-removebg-preview.png"

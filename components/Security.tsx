@@ -36,7 +36,7 @@ const Security = () => {
                   </p>
                 </div>
                 <br />
-                <button className="cursor-pointer px-8 button1" id="" onClick={() => { window.open(`${card.Link}`) }}>Learn More</button>
+                <span className="cursor-pointer px-8 button1" id="" onClick={() => { window.open(`${card.Link}`) }}>Learn More</span>
               </div>
             </Button>
           ))}

@@ -1,3 +1,4 @@
+import { link } from "fs";
 import Link from "next/link";
 
 export const navItems = [
@@ -8,22 +9,12 @@ export const navItems = [
 ];
 
 export const gridItems = [
-  {
-    id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    iframe:"https://www.loom.com/share/3c03d542f5d04df19946c770f8db3661?sid=4b6bf6a4-abc9-4d69-8724-fcd9431e63fa",
-    img: "",
-    spareImg: "",
-  },
+
   {
     id: 2,
     title: "I'm very flexible with time zone communications",
     description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2 h-[15rem]",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "",
@@ -33,7 +24,7 @@ export const gridItems = [
     id: 3,
     title: "My tech stack",
     description: "I constantly try to improve",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2 h-[15rem]",
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
@@ -43,7 +34,7 @@ export const gridItems = [
     id: 4,
     title: "Tech enthusiast with a passion for development.",
     description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-1 h-[15rem]",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
@@ -54,89 +45,70 @@ export const gridItems = [
     id: 5,
     title: "Currently building a JS Animation library",
     description: "The Inside Scoop",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
+    className: "md:col-span-3 md:row-span-2 h-[25rem]",
+    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 rounded-2xl",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/b5.svg",
     spareImg: "/grid.svg",
   },
-  {
-    id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
-  },
+
 ];
 
-export const projects = [
+export const Testimonials = [
   {
-    id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    text: "This code review startup from YC W24 is getting great buzz from other founders because of how well it actually works",
+    author: "Dalton Caldwell",
+    title: "Group Partner @Y Combinator"
   },
   {
-    id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    text: "when people think of AI code review, you think of them editing the code. But honestly, this is just as impactful.",
+    author: "Jason Liu",
+    title: "Maintainer, github.com/jxnl/instructor"
   },
   {
-    id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    text: "Ellipsis just paid for itself by saving me a couple of hours of time debugging",
+    author: "Pradeep Elankumaran ",
+    title: "Founder @jo"
   },
   {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
-  },
-];
+    text: "Last month, I replaced an $80,000 full-time engineering role at Rivo with a $40 automated AI tool.",
+    author: "Stuart Chaney",
+    title: "CEO @rivo.io"
+  }
+]
 
 export const testimonials = [
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    id: 1,
+    quote: "Last month, I replaced an $80,000 full-time engineering role at Rivo with a $40 automated AI tool.",
+    name: "Stuart Chaney",
+    title: "CEO @ rivo.io",
+    image: "/stuart.png"
+
+  },
+
+  {
+    id: 2,
+    quote: "when people think of AI code review, you think of them editing the code. But honestly, this is just as impactful.",
+    name: "Jason Liu",
+    title: "Maintainer, github.com / jxnl / instructor",
+    image: "/N3tQZNYf_400x400.jpg"
+
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    id: 3,
+    quote: "This code review startup from YC W24 is getting great buzz from other founders because of how well it actually works",
+    name: "Dalton Caldwell",
+    title: "Group Partner @Y Combinator",
+    image: "/YCTeam.jpg"
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    id: 4,
+    quote: "ellipsis just paid for itself by saving me a couple of hours of time debugging",
+    name: "Pradeep Elankumaran",
+    title: "Founder @jo",
+    image: "/PkOJcsuW_400x400.jpg"
+
   },
 ];
 
@@ -179,14 +151,14 @@ export const workExperience = [
     title: "SOC II Certified",
     desc: "Ellipsis is SOC II Type I certified. To request a copy of our report, please email team@ellipsis.dev or schedule a call with a founder.",
     className: "md:col-span-2",
-    Link:"https://docs.ellipsis.dev/security",
+    Link: "https://docs.ellipsis.dev/security",
   },
   {
     id: 2,
     title: "No data retention",
     desc: "Ellipsis doesn't persist your source code anywhere. Period. It only lives on our servers in a private AWS VPC while we're processing a job.",
     className: "md:col-span-2",
-    Link:"https://docs.ellipsis.dev/security"
+    Link: "https://docs.ellipsis.dev/security"
   }
 ];
 
@@ -202,5 +174,37 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
+  },
+];
+export const people = [
+  {
+    id: 1,
+    name: "Dalton Caldwell",
+    designation: "Managing Director @ycombinator",
+    image: "/YCTeam.jpg",
+  },
+  {
+    id: 2,
+    name: "Ivan Leo ",
+    designation: "Professional GPT wrapper writer",
+    image: "/Ivan.jpg",
+  },
+  {
+    id: 3,
+    name: "Bryan Bischof",
+    designation: "Leading AI @_hex_tech",
+    image: "/DRdonut.jpg",
+  },
+  {
+    id: 4,
+    name: "Stuart Chaney",
+    designation: "Founder/CEO @rivocommerce",
+    image: "/stuart.png",
+  },
+  {
+    id: 5,
+    name: "Jason Liu",
+    designation: "Maintainer, github.com / jxnl / instructor",
+    image: "/N3tQZNYf_400x400.jpg",
   },
 ];

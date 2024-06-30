@@ -1,0 +1,38 @@
+.clientCarousel {
+    overflow: hidden;
+    width: 100vw;
+    position: relative;
+}
+
+.scrollingWrapper {
+    display: flex;
+    animation: scrollHorizontal 20s linear infinite;
+    /* Adjust duration as needed */
+}
+
+.clientLogo {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    /* Adjust spacing between logos */
+}
+
+.clientLogo img {
+    width: 100px;
+    /* Adjust logo size as needed */
+    height: auto;
+}
+
+@keyframes scrollHorizontal {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause animation on hover */
+.scrollingWrapper:hover {
+    animation-play-state: paused;
+}

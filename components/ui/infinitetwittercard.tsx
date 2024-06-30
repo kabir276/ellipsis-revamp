@@ -3,6 +3,11 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { FaTwitter } from "react-icons/fa";
+import { Card } from "../Card";
+import Image from "next/image";
+import { AnimatedTooltip } from "./hovericonsanimat";
+import { people } from "@/data";
+
 let interval: any;
 
 type Card = {
@@ -11,6 +16,7 @@ type Card = {
     designation: string;
     content: React.ReactNode;
     Link: string,
+    image: string
 };
 
 export const CardStack = ({
@@ -41,12 +47,16 @@ export const CardStack = ({
     };
     return (
         <div>
-            <div className="flex flex-col items-center justify-center gap-4">
+            <div className="flex flex-col items-center justify-center gap-4 md:mt-24">
                 <h1 className="text-center text-xl m-auto md:text-3xl">Join The Community</h1>
                 <p className="text-center text-xs m-auto text-[#939393]">Backed by a coalition of initial supporters, contributors, and enthusiasts.</p>
                 <div className="flex felx-row  gap-4">
                     <button className="h-auto w-auto p-2 px-4 border border-[#06495790] rounded-3xl m-auto">Discord</button>
                     <button className="h-auto w-auto p-2 px-4 border border-[#06495790] rounded-3xl m-auto">Github community</button>
+                </div>
+
+                <div className="flex flex-row items-center justify-center mb-10 w-full">
+                    <AnimatedTooltip items={people} />
                 </div>
 
             </div>
@@ -67,25 +77,47 @@ export const CardStack = ({
                                     zIndex: cards.length - index,
                                 }}
                             >
-
-                                <div className="font-normal text-neutral-700 dark:text-neutral-200 h-[80%] overflow-hidden">
+                                <div> {x}</div>
+                                <div className="font-normal text-neutral-700 dark:text-neutral-200 h-[80%] overflow-auto mt-2">
 
                                     {card.content}
                                 </div>
+
                                 <div>
-                                    <p className="text-neutral-500 font-medium dark:text-white">
-                                        {x}
-                                        {card.name}
-                                    </p>
-                                    <p className="text-neutral-400 font-normal dark:text-neutral-200">
-                                        {card.designation}
-                                    </p>
+                                    <div className="flex flex-row gap-4 mt-2">
+                                        <Image
+                                            src={`${card.image}`}
+                                            height={55}
+                                            width={55}
+                                            className="rounded-full w-[12%]"
+                                            alt="logo"
+                                        />
+
+                                        <div className="flex flex-col">
+                                            <div className="flex flex-row">
+                                                <p className="text-neutral-500 font-medium dark:text-white">
+                                                    {card.name}
+                                                </p>
+                                                <Image
+                                                    src={`/32px-Twitter_Verified_Badge.svg.png`}
+                                                    height={4}
+                                                    width={19}
+                                                    className=" ml-1"
+                                                    alt="logo"
+                                                />
+                                            </div>
+                                            <p className="text-neutral-400 text-sm font-normal dark:text-neutral-200">
+                                                {card.designation}
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </motion.div>
 
                         );
                     })
                 }
+
             </div >
         </div>
     );
@@ -113,6 +145,7 @@ export const CARDS = [
 
     {
         id: 1,
+        image: "/YCTeam.jpg",
         name: "Dalton Caldwell",
         designation: "Group Partner & Managing Director @ycombinator",
         content: (
@@ -127,6 +160,7 @@ export const CARDS = [
 
     {
         id: 2,
+        image: "/stuart.png",
         name: "Stuart Chaney",
         designation: "Founder/CEO @rivocommerce",
         content: (
@@ -147,6 +181,7 @@ export const CARDS = [
 
     {
         id: 3,
+        image: "/Ivan.jpg",
         name: "Ivan Leo(In SF from 20 June - 1 July )",
         designation: "Professional GPT wrapper writer",
         content: (
@@ -160,8 +195,9 @@ export const CARDS = [
 
     {
         id: 4,
-        name: "Dalton Caldwell",
-        designation: "Group Partner & Managing Director @ycombinator",
+        image: "/uxE5ataS_400x400.jpg",
+        name: "The AI Pulse",
+        designation: "Building a newsletter that reports the latest AI trends",
         content: (
             <p>Today&apos; s<Highlight> Top AI Tools </Highlight>: <br />
                 1. 🦄
@@ -177,11 +213,12 @@ export const CARDS = [
                 reviews pull requests and <Highlight>converts GitHub comments into working </Highlight>, tested code.<br />
             </p>
         ),
-        Link: "https://x.com/daltonc/status/1778245156812284332?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1778245156812284332%7Ctwgr%5E%7Ctwcon%5Es1_&ref_url=about%3Asrcdoc",
+        Link: "https://x.com/The_AIPulse/status/1776067803424166104?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1776067803424166104%7Ctwgr%5E%7Ctwcon%5Es1_&ref_url=about%3Asrcdoc",
     },
 
     {
         id: 5,
+        image: "/DRdonut.jpg",
         name: "Dr.Donut",
         designation: "Superciliously super silly🐊 Leading AI @_hex_tech",
         content: (

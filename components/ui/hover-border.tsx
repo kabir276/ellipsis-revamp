@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation"
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -23,6 +24,7 @@ export function HoverBorderGradient({
         clockwise?: boolean;
     } & React.HTMLAttributes<HTMLElement>
 >) {
+    const router = useRouter()
     const [hovered, setHovered] = useState<boolean>(false);
     const [direction, setDirection] = useState<Direction>("TOP");
 
@@ -57,6 +59,7 @@ export function HoverBorderGradient({
     }, [hovered]);
     return (
         <Tag
+            onClick={() => { router.push("https://app.ellipsis.dev/login") }}
             onMouseEnter={(event: React.MouseEvent<HTMLDivElement>) => {
                 setHovered(true);
             }}

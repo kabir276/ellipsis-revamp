@@ -159,6 +159,7 @@ export const FloatingNav = ({
               as="button"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 cursor-pointer "
             >
+
               <div className="flex flex-row gap-2 ">
                 <span>Start free trial</span>
                 <span className="text-[24px] justify-center"><SiGithub /></span>

@@ -48,16 +48,16 @@ const ContentSection = () => {
                 </div>
             )}
             <span className='border border-[rgb(33,36,52)] h-auto w-auto p-2 px-6 rounded-[35px] text-xs text-[#d2fbff] font-bold m-auto align-middle'>PRICING</span>
-            <h1 className='text-2xl sm:text-4xl text-center mt-6 font-extrabold '>Pay per seat</h1>
+            <h1 className='text-2xl sm:text-4xl text-center mt-6 font-extrabold '>Pay Per Seat</h1>
             <h1 className='text-2xl sm:text-4xl text-center mt-6 font-extrabold '></h1>
             <p className='mt-8 text-center'>Purchase a fixed number of seats every month. Assign those seats to </p>
             <p className='mt-1 text-center'>developers. Developers then get unlimited use of the product in all repositories.</p>
             <div className="border border-[rgb(33,36,52)] h-auto w-auto mt-10 p-2 px-6 rounded-[35px] text-xs text-[#77b4ce] font-bold m-auto align-middle">
-                REPURPOSING
+                NO BRAINER OFFER
             </div>
             <div className=' p-6 h-auto w-auto border-[2px] mt-10 rounded-[2rem] border-[rgb(33,36,52)] m-auto z-10'>
                 <div onClick={() => setIsCardOpen(true)} className='cursor-pointer p-4 px-6 m-auto w-auto rounded-3xl align-middle h-auto bg-[rgb(19,23,30)]'>
-                    <p className='text-3xl font-bold text-center'> Unlimited usage</p>
+                    <p className='text-3xl font-bold text-center'> Unlimited Usage</p>
                     <p className='text-base  text-[#bbefff] font-bold text-center'>$<span className='text-3xl text-center'>20</span> <br />Per Developer/Month
 
                     </p>

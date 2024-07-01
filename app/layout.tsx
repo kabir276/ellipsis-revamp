@@ -7,7 +7,7 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ellipsis",
+  title: "Ellipsis ai",
   description: "AI to make your Github contributions easier",
 };
 

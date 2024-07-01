@@ -35,11 +35,43 @@ export const steps = [
   {
     title: "Improve",
     description: "Learn from AI insights and enhance your coding practices.",
-    additional: "Write cleaner, more efficient and code.",
+    additional: "Write cleaner, more efficient and reliable  code",
     icon: <Mergelogo />,
   },
 ];
 
+export const footerelems = [
+  {
+    id: 1,
+    href: "#Pricing",
+    title: "Pricing",
+  },
+  {
+    id: 2,
+    href: "https://app.ellipsis.dev/",
+    title: "Installation ↗",
+  },
+  {
+    id: 3,
+    href: "https://docs.ellipsis.dev/intro",
+    title: "Documentation ↗",
+  },
+  {
+    id: 4,
+    href: "https://status.ellipsis.dev/",
+    title: "Status",
+  },
+  {
+    id: 5,
+    href: "#Security",
+    title: "Security",
+  },
+  {
+    id: 6,
+    href: "https://app.ellipsis.dev/terms",
+    title: "Terms & Conditions",
+  }
+]
 
 export const gridItems = [
 

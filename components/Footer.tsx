@@ -1,7 +1,9 @@
 import Image from 'next/image';
-import { socialMedia } from '@/data';
+import { footerelems, socialMedia } from '@/data';
 import { GlareCard } from './ui/glarecard';
 import { useRouter } from "next/navigation"
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 const Footer = () => {
   const router = useRouter();
@@ -33,24 +35,14 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-4">Product</h3>
 
               <div className='flex flex-col gap-2'>
-                <span className="cursor-pointer z-50 mt-2 hover-underline">
-                  <a href="#Pricing" className="">Pricing</a>
-                </span>
-                <span className="cursor-pointer z-50 mt-2 hover-underline">
-                  <a href="https://app.ellipsis.dev/" className="">Installation<span className="ml-1">↗</span></a>
-                </span>
-                <span className="cursor-pointer z-50 mt-2 hover-underline">
-                  <a href="https://docs.ellipsis.dev/intro" className="">Documentation <span className="ml-1">↗</span></a>
-                </span>
-                <span className="cursor-pointer z-50 mt-2 hover-underline">
-                  <a href="https://status.ellipsis.dev/" className="">Status <span className="ml-1">↗</span></a>
-                </span>
-                <span className="cursor-pointer z-50 mt-2 hover-underline">
-                  <a href="#Security" className="">Security</a>
-                </span>
-                <span className="cursor-pointer z-50 mt-2 hover-underline">
-                  <a href="#Security" className="">Terms & Conditions</a>
-                </span>
+                {footerelems.map((footerelem) => (
+                  <div key={footerelem.id} className='flex'>
+                    <Link href={footerelem.href} className={cn("flex items-center decoration-1 text-muted-foreground decoration-muted-foreground hover:text-foreground hover:decoration-foreground transition-colors border-b border-muted-foreground/0 z-50 hover:border-foreground  ")}
+                      target="_blank"><p className='truncate'> {footerelem.title}</p></Link>
+                  </div>
+                )
+                )}
+
               </div>
             </div>
           </div>

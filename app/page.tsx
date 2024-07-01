@@ -12,6 +12,8 @@ import PricingSection from "@/components/Pricing";
 import ClientCarousel from "@/components/ui/logoslider";
 import Testimonials from "@/components/ui/InfiniteCards";
 import HowItWorks from "@/components/Howitworks";
+import SlideInElement from "@/components/aboutcomp";
+import FreeTrial from "@/components/freetrial";
 const Home = () => {
   return (
     <main className="relative bg-[#000] flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
@@ -20,13 +22,16 @@ const Home = () => {
         <Hero />
         <FloatingNav navItems={navItems} />
         <LoomVideoFrame />
+        <SlideInElement />
         <CardStack />
+
         <ClientCarousel />
         <Features />
         <HowItWorks />
         <Testimonials />
         <Security />
         <PricingSection />
+        <FreeTrial />
         <Footer />
       </div>
     </main>

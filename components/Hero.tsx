@@ -10,9 +10,11 @@ import { FaArrowsAlt } from "react-icons/fa";
 import IconButton from "./ui/arrowside";
 import FloatingCard from "./floating";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation"
 
 
 const Hero = () => {
+  const router = useRouter()
   return (
     <div id="Hero" className="pb-20 pt-28">
       {/**
@@ -55,15 +57,15 @@ const Hero = () => {
             Ellipsis is an AI developer tool that automatically reviews code and fixes bugs on pull requests.
           </p>
           <div className="flex flex-row gap-2 ">
-            <button className={cn(" z-50 custom-button inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#cbcbcb] transition-colors focus:outline-none focus:ring-1 focus:ring-slate-400 focus:ring-offset-1 focus:ring-offset-[#3c93a4] cursor-pointer text-xs md:text-base "
+            <button onClick={() => { router.push("https://app.ellipsis.dev/login") }} className={cn(" z-50 custom-button inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#cbcbcb] transition-colors focus:outline-none focus:ring-1 focus:ring-slate-400 focus:ring-offset-1 focus:ring-offset-[#3c93a4] cursor-pointer text-xs md:text-base "
             )}>Get started for free &nbsp; <IconButton />
             </button>
-            <button className={cn("  z-50 custom-button inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#cbcbcb] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 cursor-pointer text-xs md:text-base"
+            <button onClick={() => { router.push("https://cal.com/hunter-brooks/schedule-a-demo?layout=month_view&date=2024-07-01") }} className={cn("  z-50 custom-button inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#cbcbcb] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 cursor-pointer text-xs md:text-base"
             )
 
 
             }>
-              Schedule a demo
+              Talk to a founder
             </button>
             {/* <a id="" className="button1">
              

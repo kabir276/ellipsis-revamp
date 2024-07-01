@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-28">
+    <div id="Hero" className="pb-20 pt-28">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight

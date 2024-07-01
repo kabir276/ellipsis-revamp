@@ -92,7 +92,7 @@ export const FloatingNav = ({
             height={isMobile ? "100" : "110"}
             width={isMobile ? "110" : "130"}
             className="cursor-pointer mr-24"
-            onClick={() => router.push("#")}
+            onClick={() => router.push("#Hero")}
             alt="logo"
           />
         </div>
@@ -108,7 +108,7 @@ export const FloatingNav = ({
             <div className="flex flex-row gap-8 px-24">
               {navItems.map((navItem: any) => (
                 <Link
-                  key={navItem.link} // Use a unique identifier
+                  key={navItem.link}
                   href={navItem.link}
                   className={cn(
                     "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"

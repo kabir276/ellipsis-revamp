@@ -1,10 +1,10 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import { socialMedia } from '@/data';
 import { GlareCard } from './ui/glarecard';
-import { cn } from '@/lib/utils';
+import { useRouter } from "next/navigation"
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <footer className="bg-[#000] text-white p-8 rounded-lg">
       <div className="container mx-auto">
@@ -14,21 +14,21 @@ const Footer = () => {
             alt="grid"
             width={200}
             height={200}
-            className="w-screen opacity-50 "
+            className=" hidden md:block w-screen opacity-50 "
           />
         </div>
         <div className="flex flex-col md:flex-row justify-between">
           {/* Left side */}
           <div className="mb-8 md:mb-0">
-            <div className="flex items-center mb-4">
-              <GlareCard className="flex flex-col bg-[rgb(16,16,23)] items-center justify-center">
+            <div onClick={() => { router.push("#Hero") }} className="cursor-pointer flex items-center mb-4">
+              <GlareCard className="flex flex-col bg-[rgb(16,16,23)] cursor-pointer items-center justify-center">
                 <Image src="/eliipselogo.png" alt="Logo" width={200} height={100} className="mr-2" />
               </GlareCard>
             </div>
 
           </div>
 
-          <div className="flex flex-col md:flex-row space-y-8 -ml-32   md:space-y-0 md:space-x-16">
+          <div className=" hidden md:flex flex-col md:flex-row space-y-8 -ml-32   md:space-y-0 md:space-x-16">
             <div>
               <h3 className="text-lg font-semibold mb-4">Product</h3>
 
@@ -55,11 +55,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className=' mt-8 pt-8  flex flex-row border-t  border-gray-700 justify-between'>
-          <div className=" text-sm text-center">
+        <div className=' mt-8 pt-8  flex flex-col-reverse md:flex-row border-t  border-gray-700 md:justify-between'>
+          <div className="mt-1 text-sm text-center">
             Copyright © {new Date().getFullYear()} Ellipsis AI Inc.
           </div>
-          <div className="-mt-2 flex space-x-4">
+          <div className="-mt-3 flex space-x-4 m-auto md:m-0">
             {
               socialMedia.map((info) => (
                 <div

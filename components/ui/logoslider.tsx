@@ -13,7 +13,6 @@ const ClientCarousel = () => {
         { id: 8, src: '/risotto.png', alt: 'Client 8' },
         { id: 9, src: '/Shepherd.png', alt: 'Client 9' },
         { id: 10, src: '/symphonyAi.png', alt: 'Client 10' },
-        { id: 11, src: '/wegio.png', alt: 'Client 11' },
 
 
 
@@ -21,7 +20,7 @@ const ClientCarousel = () => {
 
     return (
         <div className="w-full overflow-hidden bg-transparent">
-            <div className="flex animate-carousel">
+            <div className="flex animate-scroll">
                 {[...logos, ...logos].map((logo, index) => (
                     <div key={`${logo.id}-${index}`} className="flex-none w-[200px] mx-4">
                         <Image
@@ -34,19 +33,7 @@ const ClientCarousel = () => {
                     </div>
                 ))}
             </div>
-            <style jsx global>{`
-                @keyframes carousel {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(-50%);
-                    }
-                }
-                .animate-carousel {
-                    animation: carousel 20s linear infinite;
-                }
-            `}</style>
+
         </div>
     );
 };

@@ -55,7 +55,7 @@ const CreativeSlideInElement = () => {
             </div>
             <div className="md:w-1/2 md:p-8 bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg shadow-lg">
                 <h2 className="text-3xl font-bold mb-4 text-center md:text-left text-purple-800">Ellipsis help teams ship 13% faster? </h2>
-                <p className="text-gray-700 text-center md:text-left  leading-relaxed">
+                <p className="text-blue-100 text-center md:text-left  leading-relaxed">
                     Ellipsis catches bugs on PRs before code review <br />
                     Higher quality of code during peer review <br />
                     PR&apos;s get merged faster

@@ -93,7 +93,7 @@ export const FloatingNav = ({
             width={isMobile ? "110" : "130"}
             className="cursor-pointer mr-24"
             onClick={() => router.push("#Hero")}
-            alt="logo"
+            alt="Ellipsis logo"
           />
         </div>
 

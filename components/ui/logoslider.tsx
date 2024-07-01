@@ -11,8 +11,10 @@ const ClientCarousel = () => {
         { id: 6, src: '/promptlayer.png', alt: 'Client 6' },
         { id: 7, src: '/relari.png', alt: 'Client 7' },
         { id: 8, src: '/risotto.png', alt: 'Client 8' },
-        { id: 9, src: '/Shepherd.png', alt: 'Client 9' },
+        { id: 9, src: '/shepherd.png', alt: 'Client 9' },
         { id: 10, src: '/symphonyAi.png', alt: 'Client 10' },
+        { id: 11, src: '/wegio.png', alt: 'Client 11' },
+
 
 
 

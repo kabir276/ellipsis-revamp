@@ -7,12 +7,6 @@ const LoomVideoFrame = () => {
     const [isHovering, setIsHovering] = useState(false);
     const videoRef = useRef<HTMLIFrameElement | null>(null);
     const videoLink = "https://www.loom.com/share/3c03d542f5d04df19946c770f8db3661?sid=68a46ea2-2197-4ac8-8136-43f5cd73e31b"
-    // // Extract videoId and sid from the link
-    // const url = new URL(videoLink);
-    // const pathParts = url.pathname.split('/');
-    // const videoId = pathParts[pathParts.length - 1];
-    // const sid = url.searchParams.get('sid');
-
     const embedUrl = `https://www.loom.com/embed/3c03d542f5d04df19946c770f8db3661?sid=68a46ea2-2197-4ac8-8136-43f5cd73e31b&hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true`;
 
     useEffect(() => {

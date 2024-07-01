@@ -51,9 +51,24 @@ const Security = () => {
             <h1 className="text-start text-2xl md:text-2xl font-bold">No rogue commits</h1>
             <p className="text-[#bfbfbf] text-sm mt-2">Ellipsis will never commit code without your explicit permission. You can configure Ellipsis to raise a side-PR so it&apos;s changes are clear.</p>
           </div>
+          <button className="flex flex-col items-start border-2 h-auto p-8 border-orange-500 text-orange-500 bg-[#724d3d88] rounded-md px-5 py-2 text-xs">
+            <div className="flex flex-row">
+              <span className="mr-4 my-auto font-bold text-5xl">Y</span>
+              <div className="flex flex-row justify-between gap-20 items-center w-full">
+                <div className="flex w-auto flex-col">
+                  <span className="text-[10px] text-left uppercase font-medium  text-gray-500">Featured on</span>
+                  <span className=" font-bold w-[8rem] text-2xl text-left">Launch YC</span>
+                </div>
+                <div className="my-auto flex flex-col">
+                  <span className="text-3xl text-orange-500 -mb-5">^</span>
+                  <span className="text-2xl text-orange-500">81</span>
+                </div>
+              </div>
+            </div>
+          </button>
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
 

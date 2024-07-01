@@ -9,6 +9,7 @@ import { SiYcombinator } from "react-icons/si";
 import { FaArrowsAlt } from "react-icons/fa";
 import IconButton from "./ui/arrowside";
 import FloatingCard from "./floating";
+import { cn } from "@/lib/utils";
 
 
 const Hero = () => {
@@ -26,12 +27,6 @@ const Hero = () => {
         />
         <Spotlight className=" md:-left-[0.7rem] top-28 h-screen " fill="rgb(51,113,149)" />
       </div>
-
-      {/**
-       *  UI: grid
-       *  change bg color to bg-black-100 and reduce grid color from
-       *  0.2 to 0.03
-       */}
       <div
         className="h-screen w-full dark:bg-[#000] bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
        absolute top-0 left-0 flex items-center justify-center"
@@ -49,7 +44,7 @@ const Hero = () => {
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             TRUSTED BY 8,100+ GITHUB USERS
           </p>
-          <FloatingCard />
+
           <TextGenerateEffect
             words="AI Code Reviews & Bug Fixes"
             className="text-center text-[40px] md:text-7xl lg:text-[5rem]"
@@ -59,10 +54,15 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-xl">
             Ellipsis is an AI developer tool that automatically reviews code and fixes bugs on pull requests.
           </p>
-          <div className="flex flex-row gap-2 cursor-pointer">
-            <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#cbcbcb] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 cursor-pointer text-xs md:text-base">Get started for free &nbsp; <IconButton />
+          <div className="flex flex-row gap-2 ">
+            <button className={cn(" z-50 custom-button inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#cbcbcb] transition-colors focus:outline-none focus:ring-1 focus:ring-slate-400 focus:ring-offset-1 focus:ring-offset-[#3c93a4] cursor-pointer text-xs md:text-base "
+            )}>Get started for free &nbsp; <IconButton />
             </button>
-            <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#cbcbcb] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 cursor-pointer text-xs md:text-base">
+            <button className={cn("  z-50 custom-button inline-flex h-12 animate-shimmer items-center justify-center rounded-full border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#cbcbcb] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 cursor-pointer text-xs md:text-base"
+            )
+
+
+            }>
               Schedule a demo
             </button>
             {/* <a id="" className="button1">
@@ -79,7 +79,7 @@ const Hero = () => {
               className="-mt-4"
             /></span>
           </span></span>
-
+          <FloatingCard />
 
         </div>
       </div>

@@ -1,3 +1,7 @@
+import Eliipselogo from "@/components/icons/elepsislogo";
+import GitHub from "@/components/icons/githubIcon";
+import Mergelogo from "@/components/icons/mergelogo";
+import Prlogo from "@/components/icons/prlogo";
 import { link } from "fs";
 import Link from "next/link";
 
@@ -7,6 +11,35 @@ export const navItems = [
   { name: "Documentation", link: "https://docs.ellipsis.dev/intro" },
   { name: "Blogs", link: "/blog" },
 ];
+
+
+export const steps = [
+  {
+    title: "Connect",
+    description: "Seamlessly integrate Ellipses with your GitHub repositories.",
+    additional: "Ellipsis Seamlessly integrates with your GitHub repositories in just a few clicks.",
+    icon: <GitHub />,
+  },
+  {
+    title: "Analyze",
+    description: "AI scans your PRs, understanding context and code patterns.",
+    additional: "It can understand the context of your code and identify patterns.",
+    icon: <Prlogo />,
+  },
+  {
+    title: "Review",
+    description: "Receive intelligent suggestions and catch potential issues early.",
+    additional: "Catch potential issues early in the development process and prevent bugs before they get merged.",
+    icon: <Eliipselogo />,
+  },
+  {
+    title: "Improve",
+    description: "Learn from AI insights and enhance your coding practices.",
+    additional: "Write cleaner, more efficient and code.",
+    icon: <Mergelogo />,
+  },
+];
+
 
 export const gridItems = [
 

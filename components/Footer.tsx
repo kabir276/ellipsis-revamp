@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { socialMedia } from '@/data';
 import { GlareCard } from './ui/glarecard';
+import { cn } from '@/lib/utils';
 
 const Footer = () => {
   return (
@@ -30,16 +31,28 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row space-y-8 -ml-32   md:space-y-0 md:space-x-16">
             <div>
               <h3 className="text-lg font-semibold mb-4">Product</h3>
-              <ul className="space-y-2">
-                <li><a href="#Pricing" className="hover:text-gray-400  cursor-pointer">Pricing ↗</a></li>
-                <li><a href="https://app.ellipsis.dev/" className=" hover:text-gray-400 cursor-pointer">Installation<span className="ml-1">↗</span></a></li>
-                <li><a href="https://docs.ellipsis.dev/intro" className="hover:text-gray-400 cursor-pointer">Documentation <span className="ml-1">↗</span></a></li>
-                <li><a href="https://status.ellipsis.dev/" className="hover:text-gray-400 cursor-pointer">Status <span className="ml-1">↗</span></a></li>
-                <li ><a href="#Security" className="hover:text-gray-400 cursor-pointer">Security</a></li>
-                <li ><a href="#Security" className="hover:text-gray-400 cursor-pointer">Terms & Conditions</a></li>
-              </ul>
-            </div>
 
+              <div className='flex flex-col gap-2'>
+                <span className="cursor-pointer z-50 mt-2 hover-underline">
+                  <a href="#Pricing" className="">Pricing</a>
+                </span>
+                <span className="cursor-pointer z-50 mt-2 hover-underline">
+                  <a href="https://app.ellipsis.dev/" className="">Installation<span className="ml-1">↗</span></a>
+                </span>
+                <span className="cursor-pointer z-50 mt-2 hover-underline">
+                  <a href="https://docs.ellipsis.dev/intro" className="">Documentation <span className="ml-1">↗</span></a>
+                </span>
+                <span className="cursor-pointer z-50 mt-2 hover-underline">
+                  <a href="https://status.ellipsis.dev/" className="">Status <span className="ml-1">↗</span></a>
+                </span>
+                <span className="cursor-pointer z-50 mt-2 hover-underline">
+                  <a href="#Security" className="">Security</a>
+                </span>
+                <span className="cursor-pointer z-50 mt-2 hover-underline">
+                  <a href="#Security" className="">Terms & Conditions</a>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
         <div className=' mt-8 pt-8  flex flex-row border-t  border-gray-700 justify-between'>

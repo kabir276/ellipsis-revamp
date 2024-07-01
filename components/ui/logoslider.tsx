@@ -6,7 +6,7 @@ const ClientCarousel = () => {
         { id: 1, src: '/abler.png', alt: 'Client 1' },
         { id: 2, src: '/axionray.png', alt: 'Client 2' },
         { id: 3, src: '/mosauic.png', alt: 'Client 3' },
-        { id: 4, src: '/OmniAi.png', alt: 'Client 4' },
+        { id: 4, src: '/OmniAI.png', alt: 'Client 4' },
         { id: 5, src: '/OPTech.png', alt: 'Client 5' },
         { id: 6, src: '/promptlayer.png', alt: 'Client 6' },
         { id: 7, src: '/relari.png', alt: 'Client 7' },

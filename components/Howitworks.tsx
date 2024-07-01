@@ -1,32 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import GitHub from './icons/githubIcon';
-import Eliipselogo from './icons/elepsislogo';
-import Prlogo from './icons/prlogo';
-import Mergelogo from './icons/mergelogo';
-
-const steps = [
-    {
-        title: "Connect",
-        description: "Seamlessly integrate Ellipses with your GitHub repositories.",
-        icon: <GitHub />,
-    },
-    {
-        title: "Analyze",
-        description: "AI scans your PRs, understanding context and code patterns.",
-        icon: <Prlogo />,
-    },
-    {
-        title: "Review",
-        description: "Receive intelligent suggestions and catch potential issues early.",
-        icon: <Eliipselogo />,
-    },
-    {
-        title: "Improve",
-        description: "Learn from AI insights and enhance your coding practices.",
-        icon: <Mergelogo />,
-    },
-];
+import { steps } from '@/data';
 
 const HowItWorks: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -43,7 +17,7 @@ const HowItWorks: React.FC = () => {
             <div className="absolute inset-0 " />
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <h2 className="text-3xl font-extrabold text-white text-center mb-16">
-                    How Ellipses Works
+                    How Ellipsis Works
                 </h2>
                 <div className="relative" ref={containerRef}>
                     <div className="absolute md:top-[12%] md:left-1/2 left-[82%]   h-full">
@@ -88,7 +62,7 @@ const HowItWorks: React.FC = () => {
                                 </div>
                                 <div className="hidden sm:block w-1/2 pl-8">
                                     <div className="bg-gray-900 bg-opacity-50 backdrop-blur-xl rounded-xl p-4 ring-1 ring-gray-700/50 hover:ring-gray-500 transition duration-300">
-                                        <p className="text-gray-400 text-sm">Additional info or features related to this step...</p>
+                                        <p className="text-gray-400 text-sm">{step.additional}</p>
                                     </div>
                                 </div>
                             </div>

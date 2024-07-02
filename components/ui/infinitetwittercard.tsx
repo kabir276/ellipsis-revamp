@@ -51,8 +51,8 @@ export const CardStack = ({
                 <h1 className="text-center text-xl m-auto md:text-3xl">Join The Community</h1>
                 <p className="text-center text-xs m-auto text-[#939393]">Backed by a coalition of initial supporters, contributors, and enthusiasts.</p>
                 <div className="flex felx-row  gap-4">
-                    <button className="h-auto w-auto p-2 px-4 border border-[#06495790] hover:shadow hover:shadow-[#4aaabd90] rounded-3xl m-auto">Discord</button>
-                    <button className="h-auto w-auto p-2 px-4 border border-[#06495790]  hover:shadow hover:shadow-[#4aaabd90] rounded-3xl m-auto">Github community</button>
+                    <button onClick={() => { window.open("https://discord.com/") }} className="h-auto w-auto p-2 px-4 border border-[#06495790] hover:shadow hover:shadow-[#4aaabd90] rounded-3xl m-auto">Discord</button>
+                    <button onClick={() => { window.open("https://github.com/") }} className="h-auto w-auto p-2 px-4 border border-[#06495790]  hover:shadow hover:shadow-[#4aaabd90] rounded-3xl m-auto">Github community</button>
                 </div>
 
                 <div className="flex flex-row items-center justify-center mb-10 w-full">

@@ -231,14 +231,19 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    Link: "https://github.com/kabir276"
   },
   {
     id: 2,
     img: "/twit.svg",
+    Link: "https://x.com/ellipsis_dev"
+
   },
   {
     id: 3,
     img: "/link.svg",
+    Link: "https://www.linkedin.com/company/ellipsis-dev"
+
   },
 ];
 export const people = [

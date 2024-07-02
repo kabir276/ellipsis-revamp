@@ -3,8 +3,10 @@ import React from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
+import { useRouter } from "next/navigation"
 
 const Security = () => {
+  const router = useRouter()
   return (
     <div id="Security" className="py-20 w-full ">
       <h1 className="heading">
@@ -51,7 +53,7 @@ const Security = () => {
             <h1 className="text-start text-2xl md:text-2xl font-bold">No rogue commits</h1>
             <p className="text-[#bfbfbf] text-sm mt-2">Ellipsis will never commit code without your explicit permission. You can configure Ellipsis to raise a side-PR so it&apos;s changes are clear.</p>
           </div>
-          <button className="flex flex-col items-start border-2 h-auto p-8 border-orange-500 text-orange-500 bg-[#724d3d88] rounded-md px-4 py-1 text-xs w-auto m-auto">
+          <button onClick={() => router.push("https://www.ycombinator.com/launches/KW7-ellipsis-automated-code-reviews-bug-fixes")} className="flex flex-col items-start border-2 h-auto p-8 border-orange-500 text-orange-500 bg-[#724d3d88] rounded-md px-4 py-1 text-xs w-auto m-auto">
             <div className="flex flex-row">
               <span className="mr-4 my-auto font-bold text-4xl">Y</span>
               <div className="flex flex-row justify-between gap-16 items-center w-auto">

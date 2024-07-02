@@ -30,7 +30,7 @@ const CreativeSlideInElement = () => {
     return (
         <div
             ref={elementRef}
-            className={`flex flex-col md:flex-row my-14 items-center transition-all duration-1000 ease-out ${isVisible
+            className={`flex flex-col md:gap-16 md:flex-row my-14 items-center transition-all duration-1000 ease-out ${isVisible
                 ? 'opacity-100 translate-y-0 rotate-0'
                 : 'opacity-0 translate-y-20 rotate-3'
                 }`}
@@ -53,7 +53,7 @@ const CreativeSlideInElement = () => {
                     className="xl:-mt-52 xl:ml-[20rem] shadow-xl z-0  absolute"
                 />
             </div>
-            <div className="md:w-1/2 md:p-8 bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg shadow-lg">
+            <div className="md:w-1/2 flex flex-col md:gap-16 md:p-8 bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg shadow-lg">
                 <h2 className="text-3xl font-bold mb-4 text-center md:text-left text-purple-800">Ellipsis help teams ship 13% faster? </h2>
                 <p className="text-blue-100 text-center md:text-left  leading-relaxed">
                     Ellipsis catches bugs on PRs before code review <br />

@@ -23,7 +23,6 @@ const Home = () => {
         <LoomVideoFrame />
         <SlideInElement />
         <CardStack />
-
         <ClientCarousel />
         <Features />
         <HowItWorks />

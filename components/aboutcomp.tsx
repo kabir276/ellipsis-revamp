@@ -37,7 +37,7 @@ const CreativeSlideInElement = () => {
         >
             <div className="w-1/2 transform transition-transform duration-1000 ease-out-back hover:scale-105 bg-[#49c0eb20] shadow-sm  shadow-[#758e95] md:p-8 z-10  rounded-3xl sm:my-28">
                 <Image
-                    src="/Github.png"
+                    src="/github.png"
                     alt="Github"
                     width={400}
                     height={200}

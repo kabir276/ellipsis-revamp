@@ -9,7 +9,7 @@ export const navItems = [
   { name: "Security", link: "#Security" },
   { name: "Pricing", link: "#Pricing" },
   { name: "Documentation", link: "https://docs.ellipsis.dev/intro" },
-  { name: "Blogs", link: "/blog" },
+  { name: "Blogs", link: "https://www.ellipsis.dev/blog" },
 ];
 
 

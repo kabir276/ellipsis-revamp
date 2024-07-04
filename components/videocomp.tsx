@@ -36,6 +36,7 @@ const LoomVideoFrame = () => {
                 frameBorder="0"
                 allowFullScreen
                 className="w-full h-full"
+                title="Introduction walk through loom video"
             ></iframe>
             {!isHovering && (
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">

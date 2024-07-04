@@ -32,7 +32,7 @@ const Footer = () => {
 
           <div className=" hidden md:flex flex-col md:flex-row space-y-8 -ml-32   md:space-y-0 md:space-x-16">
             <div>
-              <h3 className="text-lg font-semibold mb-4">Product</h3>
+              <span className="text-lg font-semibold mb-4">Product</span>
 
               <div className='flex flex-col gap-2'>
                 {footerelems.map((footerelem) => (

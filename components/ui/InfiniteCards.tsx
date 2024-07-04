@@ -46,7 +46,7 @@ const Testimonials: React.FC = () => {
                   {testimonial.title}
                 </p>
 
-                <p className="font-normal text-lg text-slate-500 mb-4 relative z-50 overflow-hidden" style={{ maxHeight: `{350 - 50 }px` }}>
+                <p className="font-normal text-lg text-slate-400 mb-4 relative z-50 overflow-hidden" style={{ maxHeight: `{350 - 50 }px` }}>
                   {testimonial.quote}
                 </p>
                 <Meteors number={20} />

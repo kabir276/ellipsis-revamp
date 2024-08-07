@@ -4,6 +4,8 @@
 
 Revamped the landing page for **Ellipsis AI (YC W24)** to enhance user experience and engagement. This update incorporates modern design principles and streamlined content presentation, aiming to effectively communicate the company's AI solutions.
 
+[![Ellipsis Revamp](https://i.vimeocdn.com/video/995612786_640.jpg)](https://player.vimeo.com/video/995612786)
+
 ## Features
 
 - **Modern Design:** Enhanced aesthetics with contemporary design elements.

@@ -3,8 +3,10 @@
 ## Overview
 
 Revamped the landing page for **Ellipsis AI (YC W24)** to enhance user experience and engagement. This update incorporates modern design principles and streamlined content presentation, aiming to effectively communicate the company's AI solutions.
+![ellipsis](https://github.com/user-attachments/assets/d386d086-2370-4f77-8d14-8a5b7664d6e1)
 
 [![Ellipsis Revamp](https://github.com/user-attachments/assets/271eac0b-8235-423e-996e-5cf82938ec2a)](https://player.vimeo.com/video/995612786)
+
 
 
 

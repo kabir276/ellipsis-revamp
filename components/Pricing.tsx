@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { HoverBorderGradient } from './ui/hover-border';
 import { SiGithub } from 'react-icons/si';
 
@@ -6,14 +7,23 @@ const ContentSection = () => {
     const [isCardOpen, setIsCardOpen] = useState(false);
 
     const toggleCard = () => setIsCardOpen(!isCardOpen);
+
     return (
-        <div id='Pricing' className="w-auto m-auto h-auto bg-[#15141dc7] p-12 rounded-3xl  flex flex-col justify-center align-middle">
-
-
+        <div id='Pricing' className="w-auto m-auto h-auto bg-[#15141dc7] p-12 rounded-3xl flex flex-col justify-center">
             {isCardOpen && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center">
+                <motion.div 
+                    className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden"
+                    initial={{ opacity: 0 }} 
+                    animate={{ opacity: 1 }} 
+                    exit={{ opacity: 0 }}
+                >
                     <div className="absolute inset-0 bg-black opacity-50 backdrop-blur-sm"></div>
-                    <div className='relative p-6 rounded-3xl bg-[rgb(19,23,30)] max-w-md w-auto m-4'>
+                    <motion.div 
+                        className='relative p-6 rounded-3xl bg-[rgb(19,23,30)] max-w-md w-auto m-4'
+                        initial={{ scale: 0 }} 
+                        animate={{ scale: 1 }} 
+                        exit={{ scale: 0 }}
+                    >
                         <button
                             onClick={toggleCard}
                             className="absolute top-2 right-4 text-white text-2xl hover:text-gray-300"
@@ -27,10 +37,10 @@ const ContentSection = () => {
                             <HoverBorderGradient
                                 containerClassName="rounded-full"
                                 as="button"
-                                className="dark:bg-black bg-white text-black dark:text-white flex items-center  space-x-2 cursor-pointer  "
+                                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 cursor-pointer"
                             >
                                 <div className="flex flex-row gap-2 m-auto px-8 ">
-                                    <span >Start free trial</span>
+                                    <span>Start free trial</span>
                                     <span className="text-[24px] justify-center"><SiGithub /></span>
                                 </div>
                             </HoverBorderGradient>
@@ -43,52 +53,32 @@ const ContentSection = () => {
                             <li>✓ Unlimited code generation</li>
                             <li>✓ Question & answer functionality</li>
                         </ul>
-
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             )}
-            <span className='border border-[rgb(33,36,52)] h-auto w-auto p-2 px-6 rounded-[35px] text-xs text-[#d2fbff] font-bold m-auto align-middle'>PRICING</span>
+            <span className='border border-[rgb(33,36,52)] h-auto w-auto p-2 px-6 rounded-[35px] text-xs text-[#d2fbff] font-bold m-auto'>PRICING</span>
             <h1 className='text-2xl sm:text-4xl text-center mt-6 font-extrabold '>Pay Per Seat</h1>
-            <h1 className='text-2xl sm:text-4xl text-center mt-6 font-extrabold '></h1>
             <p className='mt-8 text-center'>Purchase a fixed number of seats every month. Assign those seats to </p>
             <p className='mt-1 text-center'>developers. Developers then get unlimited use of the product in all repositories.</p>
-            <div className="border border-[rgb(33,36,52)] h-auto w-auto mt-10 p-2 px-6 rounded-[35px] text-xs text-[#77b4ce] font-bold m-auto align-middle">
+            <div className="border border-[rgb(33,36,52)] h-auto w-auto mt-10 p-2 px-6 rounded-[35px] text-xs text-[#77b4ce] font-bold m-auto">
                 NO BRAINER OFFER
             </div>
-            <div className=' p-6 h-auto w-auto border-[2px] mt-10 rounded-[2rem] border-[rgb(33,36,52)] m-auto z-10'>
-                <div onClick={() => setIsCardOpen(true)} className='cursor-pointer p-4 px-6 m-auto w-auto rounded-3xl align-middle h-auto bg-[rgb(19,23,30)]'>
-                    <p className='text-3xl font-bold text-center'> Unlimited Usage</p>
-                    <p className='text-base  text-[#bbefff] font-bold text-center'>$<span className='text-3xl text-center'>20</span> <br />Per Developer/Month
-
-                    </p>
-                </div>
-            </div>
-            <div
-                className="h-[18.9rem] md:h-[16.8rem] w-[1.5px] left-1/2 mt-[24.3rem] md:mt-[21.4%]  m-auto -z-0 bg-[rgb(33,36,52)] overflow-hidden"
-                style={{ position: "absolute" }}
+            <motion.div
+                onClick={() => setIsCardOpen(true)}
+                className='cursor-pointer p-4 px-6 m-auto w-auto rounded-3xl h-auto bg-[rgb(19,23,30)]'
+                whileHover={{ scale: 1.05 }} // Adds a slight scaling effect on hover
+                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >
-
-                <div className=" w-full h-full">
-
-                    <div
-                        className=" w-4  h-[30rem] bg-gradient-to-b from-transparent via-[#bbfff978] to-[#d1eeff1a]"
-                        style={{
-                            animation: 'shineVertical 6s linear infinite',
-                        }}
-                    />
-                </div>
-
-
-                <style jsx>{`
-    @keyframes shineVertical {
-      0% { transform: translateY(-100%); }
-      100% { transform: translateY(100%); }
-    }
-  `}</style>
-            </div>
-
+                <p className='text-3xl font-bold text-center'>Unlimited Usage</p>
+                <p className='text-base text-[#bbefff] font-bold text-center'>
+                    $<span className='text-3xl text-center'>20</span> <br />
+                    Per Developer/Month
+                </p>
+                <p className='mt-2 text-center text-gray-300 text-lg'>
+                    Add tons of Tailwind CSS UI, vibrant gradient text, and ultra-smooth animations to enhance user experience.
+                </p>
+            </motion.div>
         </div>
-
     );
 };
 
